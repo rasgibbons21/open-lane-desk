@@ -1,0 +1,70 @@
+name: Refresh Job Bank feed
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pull TFW search pages
+        run: |
+          python3 << 'PY'
+          import json, re, urllib.parse, urllib.request
+          from datetime import datetime, timezone
+          queries = [
+            ("grocery", "store manager"),
+            ("warehouse", "warehouse"),
+            ("fish", "fish plant"),
+            ("farm", "farm worker"),
+          ]
+          jobs = []
+          for cat, q in queries:
+            url = "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=" + urllib.parse.quote(q) + "&fsrc=32&sort=D"
+            try:
+              req = urllib.request.Request(url, headers={"User-Agent": "OpenLaneDesk/1.0"})
+              html = urllib.request.urlopen(req, timeout=25).read().decode("utf-8", "ignore")
+              ids = re.findall(r"jobpostingtfw/(\d+)", html)[:8]
+              if not ids:
+                raise RuntimeError("no ids")
+              for i in ids:
+                jobs.append({
+                  "id": "jb-" + i,
+                  "cat": cat,
+                  "title": q.title() + " opening",
+                  "employer": "See Job Bank",
+                  "place": "Canada",
+                  "pay": "See ad",
+                  "lmia": "LMIA requested or approved",
+                  "noc": "Confirm on Job Bank",
+                  "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/" + i,
+                  "reqs": ["Read who can apply on the Job Bank page."],
+                  "apply": ["Open this Job Bank page.", "Use Direct Apply if it is there.", "Save the confirmation."]
+                })
+            except Exception:
+              jobs.append({
+                "id": "search-" + cat,
+                "cat": cat,
+                "title": q.title() + " ads",
+                "employer": "Job Bank TFW",
+                "place": "Canada",
+                "pay": "See each ad",
+                "lmia": "LMIA requested or approved",
+                "noc": "Confirm on the ad",
+                "url": url,
+                "reqs": ["Live card pull failed. Search is still linked."],
+                "apply": ["Open Job Bank.", "Use Direct Apply.", "Save the confirmation."]
+              })
+          out = {"updatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"), "source": "Job Bank Temporary Foreign Workers.", "jobs": jobs}
+          json.dump(out, open("jobs-feed.json", "w"), indent=2)
+          print("jobs", len(jobs))
+          PY
+      - name: Commit feed
+        run: |
+          git config user.name "open-lane-bot"
+          git config user.email "actions@github.com"
+          git add jobs-feed.json
+          git diff --cached --quiet || git commit -m "Refresh Job Bank feed" && git push

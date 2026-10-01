@@ -1,0 +1,58 @@
+{
+  "updatedAt": "2026-10-01T15:30:00Z",
+  "source": "Job Bank Temporary Foreign Workers. Confirm every card on the linked page.",
+  "jobs": [
+    {
+      "id": "search-grocery",
+      "cat": "grocery",
+      "title": "Food store manager and supervisor ads",
+      "employer": "Job Bank TFW",
+      "place": "Canada",
+      "pay": "See each ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "60020 / 62010",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=store+manager&fsrc=32&sort=D",
+      "reqs": ["Store lead time", "Staff, stock, customers"],
+      "apply": ["Open Job Bank.", "Use Direct Apply if it is there.", "Save the confirmation."]
+    },
+    {
+      "id": "search-warehouse",
+      "cat": "warehouse",
+      "title": "Warehouse supervisor and handler ads",
+      "employer": "Job Bank TFW",
+      "place": "Canada",
+      "pay": "See each ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on the ad",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=warehouse&fsrc=32&sort=D",
+      "reqs": ["Floor or stock work you can describe"],
+      "apply": ["Open Job Bank.", "Copy the Job Bank ID.", "Do not pay an agent."]
+    },
+    {
+      "id": "search-fish",
+      "cat": "fish",
+      "title": "Fish plant ads",
+      "employer": "Job Bank TFW",
+      "place": "Atlantic Canada",
+      "pay": "See each ad",
+      "lmia": "Often seasonal LMIA",
+      "noc": "95107 on many ads",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=fish+plant&fsrc=32&sort=D",
+      "reqs": ["Standing cold wet work", "Training on many ads"],
+      "apply": ["Open Job Bank.", "Housing only if that ad says so."]
+    },
+    {
+      "id": "search-farm",
+      "cat": "farm",
+      "title": "Farm worker ads",
+      "employer": "Job Bank TFW",
+      "place": "Canada",
+      "pay": "See each ad",
+      "lmia": "LMIA or SAWP",
+      "noc": "Primary agriculture",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobsearch?searchstring=farm+worker&fsrc=32&sort=D",
+      "reqs": ["Jamaica SAWP is still MLSS, not this button"],
+      "apply": ["Open Job Bank for private ads.", "SAWP stays with the official office."]
+    }
+  ]
+}

@@ -70,7 +70,8 @@ function renderDetail() {
   d.innerHTML = `<h2>${j.title}</h2><p class="meta">${j.employer} · ${j.place}<br>${j.pay} · ${j.noc}</p>
     <h3>Requirements</h3><ul>${j.reqs.map((r)=>`<li>${r}</li>`).join("")}</ul>
     <h3>How to apply</h3><ol>${j.apply.map((r)=>`<li>${r}</li>`).join("")}</ol>
-    <p class="fine">Then: Papers → Packet → log the Job Bank ID on the trail tab.</p>`;
+    <p><a class="primary" href="${j.url || "https://www.jobbank.gc.ca/temporary-foreign-workers"}" target="_blank" rel="noopener">Open on Job Bank</a></p>
+    <p class="fine">Apply there. Direct Apply stays on Job Bank. Then log the Job Bank ID here.</p>`;
 }
 
 function renderThumbs() {
@@ -218,7 +219,7 @@ $("trail-add").onclick = () => {
 
 async function loadLiveJobs() {
   try {
-    const res = await fetch("/api/jobs");
+    const res = await fetch("/jobs-feed.json");
     const data = await res.json();
     if (data.jobs && data.jobs.length) {
       JOBS.length = 0;
