@@ -1,70 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Outfit:wght@380;500;600&display=swap");
 :root {
-  --ink: #1a1414;
-  --paper: #f7f4ef;
-  --panel: #fffdfb;
-  --line: #e2d6d4;
-  --maple: #c8102e;
-  --maple-dark: #8e0b20;
-  --snow: #ffffff;
-  --mute: #6a5c5c;
-  --moss: #8e0b20;
-  --heat: #c8102e;
+  --ink: #14110e;
+  --paper: #f4efe6;
+  --panel: #fbf7f1;
+  --line: #e4d8c8;
+  --maple: #9e2b2f;
+  --maple-dark: #6e1c22;
+  --gold: #a68456;
+  --mute: #6d645b;
 }
 * { box-sizing: border-box; }
-html, body { margin: 0; background: var(--paper); color: var(--ink); font: 18px/1.5 "Iowan Old Style", Palatino, Georgia, serif; }
+html, body { margin: 0; background: radial-gradient(1200px 500px at 10% -10%, #fff, transparent), var(--paper); color: var(--ink); font: 17px/1.55 Outfit, "Segoe UI", sans-serif; }
 a { color: var(--maple-dark); }
-.wrap { max-width: 860px; margin: 0 auto; padding: 1.25rem 1.2rem 5rem; }
-.nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; align-items: center; padding-bottom: 1rem; border-bottom: 3px solid var(--maple); margin-bottom: 1.5rem; }
-.nav strong { margin-right: auto; display: flex; align-items: center; gap: 0.4rem; }
-.nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
-h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.6rem; }
-h2 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
-.lede { font-size: 1.15rem; color: var(--mute); margin: 0 0 1.2rem; }
-.disclaimer { padding: 0.65rem 0.75rem; border-left: 3px solid var(--maple); background: #f8ecee; font-size: 0.92rem; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.2rem 0; }
-.btn { display: inline-block; padding: 0.55rem 0.9rem; border: 1px solid var(--ink); text-decoration: none; color: var(--ink); background: #fff; }
-.btn.primary { background: var(--maple); color: #fff; border-color: var(--maple); }
-.cards { display: grid; gap: 0.7rem; margin: 1.2rem 0; }
-.card { background: var(--panel); border: 1px solid var(--line); padding: 0.9rem 1rem; }
-.price-grid { display: grid; gap: 0.7rem; }
-@media (min-width: 700px) { .price-grid { grid-template-columns: 1fr 1fr 1fr; } }
-.price-grid .card strong { display: block; font-size: 1.6rem; margin: 0.3rem 0; }
-ul { padding-left: 1.15rem; }
-footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 3px solid var(--maple); font-size: 0.88rem; color: var(--mute); }
-.flag-bar { height: 8px; background: linear-gradient(90deg, var(--maple) 0 18%, #fff 18% 82%, var(--maple) 82% 100%); }
-.site-nav { display:flex; gap:1rem; flex-wrap:wrap; padding:0.6rem 1.4rem; border-bottom:1px solid var(--line); font-size:0.95rem; }
-.site-nav a { color:var(--ink); text-decoration:none; }
-
-/* Maple assistant */
-#maple-fab {
-  position: fixed; right: 1rem; bottom: 1rem; z-index: 40;
-  width: 3.4rem; height: 3.4rem; border-radius: 50%;
-  background: var(--maple); color: #fff; border: 2px solid #fff;
-  box-shadow: 0 8px 24px rgba(200,16,46,.35);
-  cursor: pointer; display: grid; place-items: center;
-}
-#maple-fab svg { width: 1.6rem; height: 1.6rem; fill: #fff; }
-#maple-panel {
-  position: fixed; right: 1rem; bottom: 4.8rem; z-index: 40;
-  width: min(360px, calc(100vw - 1.6rem));
-  background: #fff; border: 1px solid var(--line);
-  box-shadow: 0 16px 40px rgba(26,20,20,.18);
-  display: none; flex-direction: column; max-height: min(70vh, 520px);
-}
+.wrap { max-width: 980px; margin: 0 auto; padding: 1.4rem 1.4rem 5rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 1rem 1.4rem; align-items: center; padding-bottom: 1.1rem; }
+.nav strong { margin-right: auto; display: flex; align-items: center; gap: 0.45rem; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.78rem; }
+.leaf { width: 1.1rem; height: 1.1rem; fill: var(--maple); }
+.nav a { text-decoration: none; color: var(--ink); font-size: 0.92rem; }
+h1 { font-family: Fraunces, Georgia, serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 520; line-height: 1.08; letter-spacing: -0.03em; margin: 0.4rem 0 0.8rem; max-width: 16ch; }
+h2 { font-family: Fraunces, Georgia, serif; font-weight: 520; font-size: 1.35rem; margin: 0 0 0.35rem; }
+.lede { font-size: 1.12rem; color: var(--mute); max-width: 42rem; margin: 0 0 1.4rem; }
+.disclaimer { display: inline-block; padding: 0.35rem 0.7rem; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-size: 0.82rem; color: var(--mute); }
+.btn { display: inline-block; padding: 0.75rem 1.15rem; border-radius: 999px; text-decoration: none; color: #fff; background: var(--ink); }
+.btn.primary { background: var(--maple); }
+.cards { display: grid; gap: 0.8rem; margin-top: 1.6rem; }
+@media (min-width: 800px) { .cards { grid-template-columns: 1fr 1fr 1fr; } }
+.card { background: rgba(255,255,255,0.72); border: 1px solid var(--line); border-radius: 16px; padding: 1.1rem 1.15rem; box-shadow: 0 10px 30px rgba(20,17,14,0.04); }
+.card p { margin: 0; color: var(--mute); }
+.flag-bar { height: 4px; background: linear-gradient(90deg, var(--maple), var(--gold), var(--maple)); }
+footer, .site-nav { font-size: 0.9rem; }
+.site-nav { display: flex; gap: 1rem; padding: 0.8rem 1.4rem; }
+.site-nav a { color: var(--ink); text-decoration: none; }
+#maple-fab { position: fixed; right: 1.1rem; bottom: 1.1rem; z-index: 40; width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--maple); color: #fff; border: 0; box-shadow: 0 12px 30px rgba(158,43,47,.35); cursor: pointer; }
+#maple-fab svg { width: 1.5rem; height: 1.5rem; fill: #fff; }
+#maple-panel { position: fixed; right: 1.1rem; bottom: 5rem; z-index: 40; width: min(360px, calc(100vw - 1.6rem)); background: #fff; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 20px 50px rgba(20,17,14,.16); display: none; flex-direction: column; max-height: 70vh; overflow: hidden; }
 #maple-panel.open { display: flex; }
-.maple-head {
-  background: var(--maple); color: #fff; padding: 0.7rem 0.85rem;
-  display: flex; align-items: center; gap: 0.5rem;
-}
-.maple-head svg { width: 1.2rem; height: 1.2rem; fill: #fff; }
-.maple-head p { margin: 0; font-size: 0.78rem; opacity: .9; }
-.maple-head strong { display: block; font-size: 1rem; }
-.maple-msgs { flex: 1; overflow: auto; padding: 0.75rem; background: #faf7f5; display: flex; flex-direction: column; gap: 0.45rem; }
-.maple-msgs .m { padding: 0.5rem 0.65rem; border-radius: 8px; font-size: 0.92rem; max-width: 92%; }
-.maple-msgs .bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; }
-.maple-msgs .you { background: var(--maple); color: #fff; align-self: flex-end; }
-.maple-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0 0.7rem 0.4rem; }
-.maple-chips button { font: inherit; font-size: 0.78rem; background: #fff; border: 1px solid var(--line); padding: 0.2rem 0.45rem; cursor: pointer; }
-.maple-form { display: flex; gap: 0.35rem; padding: 0.55rem; border-top: 1px solid var(--line); }
-.maple-form input { flex: 1; font: inherit; border: 1px solid var(--line); padding: 0.4rem 0.5rem; }
-.maple-form button { font: inherit; background: var(--maple); color: #fff; border: 0; padding: 0.4rem 0.65rem; cursor: pointer; }
+.maple-head { background: var(--ink); color: #fff; padding: 0.8rem 0.9rem; display: flex; gap: 0.5rem; align-items: center; }
+.maple-head svg { width: 1.1rem; height: 1.1rem; fill: #fff; }
+.maple-head p { margin: 0; font-size: 0.75rem; opacity: .75; }
+.maple-msgs { flex: 1; overflow: auto; padding: 0.8rem; display: flex; flex-direction: column; gap: 0.4rem; background: #faf7f2; }
+.maple-msgs .m { padding: 0.5rem 0.7rem; border-radius: 12px; font-size: 0.92rem; max-width: 92%; }
+.maple-msgs .bot { background: #fff; }
+.maple-msgs .you { background: var(--ink); color: #fff; align-self: flex-end; }
+.maple-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0.4rem 0.7rem; }
+.maple-chips button, .maple-form button, .actions button, .cats button, .tabs button { font: inherit; }
+.maple-chips button { border: 1px solid var(--line); background: #fff; border-radius: 999px; padding: 0.25rem 0.55rem; }
+.maple-form { display: flex; gap: 0.35rem; padding: 0.6rem; border-top: 1px solid var(--line); }
+.maple-form input { flex: 1; border: 1px solid var(--line); border-radius: 10px; padding: 0.45rem 0.55rem; font: inherit; }
+.maple-form button { background: var(--ink); color: #fff; border: 0; border-radius: 10px; padding: 0.45rem 0.7rem; }
