@@ -176,26 +176,18 @@ function goPacket(unlock) {
 }
 
 $("assemble").onclick = () => goPacket(true);
-$("pay").onclick = async () => {
+const PAY_LINK = "https://buy.stripe.com/test_replace_me";
+$("pay").onclick = () => {
   if (!form().name) { alert("Add your name on Papers first."); return; }
   if (!selected) { alert("Pick a listing first."); return; }
-  $("pay").disabled = true;
-  try {
-    const res = await fetch("/api/checkout", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ jobId: selected.id, title: selected.title })
-    });
-    const data = await res.json();
-    if (data.url) { location.href = data.url; return; }
-    alert(data.error || "Stripe is not ready. Add STRIPE_SECRET_KEY on Vercel.");
-  } catch (err) {
-    alert("Checkout failed. You can still print a demo packet.");
-  } finally {
-    $("pay").disabled = false;
+  if (PAY_LINK.includes("replace_me")) {
+    alert("Paste your Stripe payment link into PAY_LINK in app.js, then redeploy.");
+    return;
   }
+  window.open(PAY_LINK, "_blank", "noopener");
+  paid = true;
+  $("sheet").textContent = packetText();
 };
-if (new URLSearchParams(location.search).get("paid") === "1") goPacket(true);
 renderCats(); renderJobs(); renderDetail(); renderTrail();
 loadLiveJobs();
 $("print").onclick = () => {
