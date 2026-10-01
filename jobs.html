@@ -3,20 +3,178 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Canada job openings | Open Lane Desk</title>
+  <title>Open Lane Desk — Canadian résumé packet and Job Bank trail</title>
+  <meta name="description" content="Fix the painful parts of applying to Canadian employers from abroad: Canadian-style résumé, honest status, Job Bank Direct Apply log, LMIA scam check. Not immigration advice." />
+  <link rel="canonical" href="https://open-lane-desk.vercel.app/jobs.html" />
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-  <div class="flag-bar"></div>
-  <div class="wrap">
-    <nav class="nav"><strong>Open Lane Desk</strong><a href="/">Home</a><a href="pricing.html">Pricing</a></nav>
-    <p class="disclaimer">Sample board. Confirm Job Bank. Ask Maple for apply steps.</p>
-    <h1>Openings</h1>
-    <div class="card"><h2>Food store manager</h2><p>Brampton, ON · $37/hr · NOC 60020</p></div>
-    <div class="card"><h2>Retail store supervisor</h2><p>ON / AB / BC · NOC 62010</p></div>
-    <div class="card"><h2>Fish plant labourer</h2><p>Atlantic Canada · NOC 95107</p></div>
-    <p><a class="btn primary" href="pricing.html">Packet $14.99</a></p>
+  <div class="flag-bar" aria-hidden="true"></div>
+  <div class="site-nav">
+    <a href="/"><strong>Open Lane Desk</strong></a>
+    <a href="how.html">How</a>
+    <a href="pricing.html">Pricing</a>
   </div>
+  <header class="top">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg class="leaf" viewBox="0 0 24 24"><path d="M12 2c.4 1.6.3 3.2-.4 4.6 1.2-.6 2.5-1 3.9-1.1-.2 1.6-.9 3-2 4.1 1.6-.2 3.1.1 4.5.8-.9 1.3-2.2 2.3-3.7 2.8 1.3.7 2.4 1.8 3.1 3.2-1.6.2-3.2 0-4.6-.6.4 1.4.4 2.9 0 4.3L12 22l-.8-1.9c-.4-1.4-.4-2.9 0-4.3-1.4.6-3 .8-4.6.6.7-1.4 1.8-2.5 3.1-3.2-1.5-.5-2.8-1.5-3.7-2.8 1.4-.7 2.9-1 4.5-.8-1.1-1.1-1.8-2.5-2-4.1 1.4.1 2.7.5 3.9 1.1C11.7 5.2 11.6 3.6 12 2z"/></svg></span>
+      <div>
+        <strong>The desk</strong>
+        <p>Canadian résumé. Honest status. Job Bank trail. One packet per real ad.</p>
+      </div>
+    </div>
+    <p class="disclaimer">Not immigration or legal advice. Not IRCC. You send the file to the employer. IRCC papers are a different pile — later, on their site, after an offer.</p>
+  </header>
+  <nav class="tabs" role="tablist">
+    <button type="button" class="on" data-tab="desk">1. Listings</button>
+    <button type="button" data-tab="papers">2. Papers</button>
+    <button type="button" data-tab="packet">3. Packet</button>
+    <button type="button" data-tab="trail">4. Job Bank trail</button>
+    <button type="button" data-tab="piles">5. Two piles</button>
+  </nav>
+  <main>
+    <section id="tab-desk" class="tab">
+      <div class="panel">
+        <h1>Openings</h1>
+        <p class="lede">Sample board. Confirm every card on Job Bank TFW. Prefer Direct Apply. Screenshot Job ID + NOC before you close the tab.</p>
+        <div class="cats" id="cats"></div>
+      </div>
+      <div class="split">
+        <div class="jobs" id="jobs"></div>
+        <aside class="detail" id="detail"><p class="fine">Select a listing.</p></aside>
+      </div>
+    </section>
+
+    <section id="tab-papers" class="tab" hidden>
+      <div class="panel">
+        <h1>Answer these — Maple builds the Canadian file</h1>
+        <p class="lede">We ask what a Canadian employer packet needs. No photo, age, or religion. Use your real address abroad.</p>
+        <form id="profile-form" class="grid">
+          <h2 class="wide">Who you are</h2>
+          <label>Full legal name <input name="name" required placeholder="First Middle Last" /></label>
+          <label>Email <input name="email" type="email" /></label>
+          <label>Phone with country code <input name="phone" placeholder="+1-876-…" /></label>
+          <label class="wide">Street address where you live now
+            <input name="street" placeholder="Street, town, parish or state, country" />
+          </label>
+          <label>City / town <input name="city" placeholder="May Pen" /></label>
+          <label>Country <input name="country" placeholder="Jamaica" /></label>
+          <label>Languages you use at work
+            <input name="languages" value="English" />
+          </label>
+          <label>Authorized to work in Canada today?
+            <select name="auth">
+              <option value="no">No — I would need a permit after an offer</option>
+              <option value="yes">Yes — I already hold a valid permit</option>
+            </select>
+          </label>
+
+          <h2 class="wide">Last place of employment</h2>
+          <label>Employer / shop name <input name="lastEmp" placeholder="e.g. Gayle’s Market" /></label>
+          <label>Your title there <input name="lastTitle" placeholder="Owner-operator / store manager" /></label>
+          <label>City of that job <input name="lastCity" /></label>
+          <label>Country of that job <input name="lastCountry" /></label>
+          <label>Start (month / year) <input name="lastStart" placeholder="Jan 2014" /></label>
+          <label>End <input name="lastEnd" placeholder="Present" /></label>
+          <label>Hours per week <input name="hours" placeholder="50" /></label>
+          <label>Staff you supervised <input name="staff" placeholder="4" /></label>
+          <label class="wide">What you actually did there (plain facts)
+            <textarea name="lastDuties" rows="4" placeholder="Hired staff, ordered stock, counted inventory, served customers, paid suppliers…"></textarea>
+          </label>
+          <label class="wide">One result you can stand behind
+            <input name="result" placeholder="e.g. kept the shop open 6 days, cut spoilage, trained 3 cashiers" />
+          </label>
+
+          <h2 class="wide">Earlier work (optional)</h2>
+          <label class="wide">Previous job — title, employer, years, what you did
+            <textarea name="prevWork" rows="3" placeholder="Cashier, same shop, 2010–2014. Served customers and stocked shelves."></textarea>
+          </label>
+
+          <h2 class="wide">School and tickets</h2>
+          <label class="wide">Highest school or training
+            <input name="school" placeholder="High school, certificate, short course — year and place" />
+          </label>
+          <label class="wide">Licences or tickets (forklift, food handler, none)
+            <input name="tickets" placeholder="None / food handler 2019" />
+          </label>
+
+          <h2 class="wide">Why this kind of Canadian job</h2>
+          <label class="wide">Why grocery / warehouse / plant — two sentences, no visa talk
+            <textarea name="why" rows="3" placeholder="I have run a food shop for 12 years. I want store-lead or plant work I already know how to do."></textarea>
+          </label>
+        </form>
+        <p><button type="button" class="primary" id="assemble">Have Maple assemble the Canadian résumé + letter</button></p>
+      </div>
+      <div class="panel">
+        <h2>Screenshots of proof</h2>
+        <p class="fine">Reference letter, store photo, tickets. Caption each. These support the employer packet — they are not an IRCC bundle.</p>
+        <div class="upload-row">
+          <input id="file" type="file" accept="image/*" multiple />
+          <input id="caption" placeholder="Caption" />
+        </div>
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+    </section>
+
+    <section id="tab-packet" class="tab" hidden>
+      <div class="panel">
+        <h1>One packet per job</h1>
+        <p class="lede">Pain: same CV sprayed at 200 ads. This packet names the job, the town, and the honest status line. $14.99 on the live desk; demo unlocks the print sheet.</p>
+        <p class="fine" id="packet-target">Pick a listing first.</p>
+        <div class="actions">
+          <button type="button" class="primary" id="pay">Unlock packet (demo)</button>
+          <button type="button" id="print">Print / Save as PDF</button>
+        </div>
+      </div>
+      <article class="sheet" id="sheet"><p class="fine">Preview after unlock.</p></article>
+    </section>
+
+    <section id="tab-trail" class="tab" hidden>
+      <div class="panel">
+        <h1>Job Bank trail</h1>
+        <p class="lede">Pain: no proof you applied; mix-up between Indeed and Job Bank. Log the government ID. Use Direct Apply when the ad has it. Save the confirmation email.</p>
+        <form id="trail-form" class="grid">
+          <label>Job Bank ID <input name="jbid" placeholder="e.g. 44922040" /></label>
+          <label>Title <input name="jtitle" /></label>
+          <label>Date sent <input name="jdate" type="date" /></label>
+          <label>How sent
+            <select name="jhow">
+              <option>Job Bank Direct Apply</option>
+              <option>Employer email on the ad</option>
+              <option>Indeed / other — also confirm Job Bank</option>
+            </select>
+          </label>
+          <label class="wide">Saved confirmation? <input name="jnote" placeholder="Yes — email saved / screenshot of thank-you page" /></label>
+        </form>
+        <p><button type="button" class="primary" id="trail-add">Add to trail</button></p>
+        <div id="trail-list"></div>
+      </div>
+    </section>
+
+    <section id="tab-piles" class="tab" hidden>
+      <div class="panel">
+        <h1>Two piles — don’t mix them</h1>
+        <div class="split">
+          <div class="card">
+            <h2>Pile A — employer (this desk)</h2>
+            <p>Canadian résumé, short letter, optional certificates. Sent to the store / Job Bank apply button.</p>
+          </div>
+          <div class="card">
+            <h2>Pile B — IRCC (later)</h2>
+            <p>Only after a real offer: passport, employer offer letter, LMIA letter if they have one, medical, police check as IRCC lists. Not generated here.</p>
+          </div>
+        </div>
+        <h2>LMIA is not for sale</h2>
+        <p>If WhatsApp says “pay now, LMIA waiting, only passport and CV” — that is not a job. The employer files LMIA with ESDC. You do not buy it in naira or US dollars from an agent.</p>
+        <p><a href="https://www.jobbank.gc.ca/temporary-foreign-workers">Job Bank TFW</a> · <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada.html">IRCC work in Canada</a></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Confirm ads on Job Bank. Packet is not a permit. <a href="terms.html">Terms</a></p>
+  </footer>
+  <script src="app.js"></script>
   <script src="maple.js"></script>
 </body>
 </html>

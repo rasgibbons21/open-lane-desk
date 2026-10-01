@@ -1,33 +1,70 @@
-:root { --ink:#1a1414; --paper:#f7f4ef; --panel:#fffdfb; --line:#e2d6d4; --maple:#c8102e; --maple-dark:#8e0b20; --mute:#6a5c5c; }
-* { box-sizing:border-box; }
-html,body { margin:0; background:var(--paper); color:var(--ink); font:18px/1.5 Palatino,Georgia,serif; }
-a { color:var(--maple-dark); }
-.wrap { max-width:860px; margin:0 auto; padding:1.25rem 1.2rem 5rem; }
-.nav { display:flex; flex-wrap:wrap; gap:.75rem 1.1rem; align-items:center; padding-bottom:1rem; border-bottom:3px solid var(--maple); margin-bottom:1.5rem; }
-.nav strong { margin-right:auto; display:flex; align-items:center; gap:.4rem; }
-.nav a { text-decoration:none; color:var(--ink); }
-h1 { font-size:2rem; line-height:1.2; }
-.lede,.mute { color:var(--mute); }
-.disclaimer { padding:.65rem .75rem; border-left:3px solid var(--maple); background:#f8ecee; font-size:.92rem; }
-.btn { display:inline-block; padding:.55rem .9rem; border:1px solid var(--ink); text-decoration:none; color:var(--ink); background:#fff; }
-.btn.primary { background:var(--maple); color:#fff; border-color:var(--maple); }
-.card { background:var(--panel); border:1px solid var(--line); padding:.9rem 1rem; margin:.7rem 0; }
-footer { margin-top:2.5rem; padding-top:1rem; border-top:3px solid var(--maple); font-size:.88rem; color:var(--mute); }
-.flag-bar { height:8px; background:linear-gradient(90deg,var(--maple) 0 18%,#fff 18% 82%,var(--maple) 82% 100%); }
-.leaf { width:1.15rem; height:1.15rem; fill:var(--maple); display:inline-block; }
-#maple-fab { position:fixed; right:1rem; bottom:1rem; z-index:40; width:3.4rem; height:3.4rem; border-radius:50%; background:var(--maple); border:2px solid #fff; box-shadow:0 8px 24px rgba(200,16,46,.35); cursor:pointer; display:grid; place-items:center; }
-#maple-fab svg { width:1.6rem; height:1.6rem; fill:#fff; }
-#maple-panel { position:fixed; right:1rem; bottom:4.8rem; z-index:40; width:min(360px,calc(100vw - 1.6rem)); background:#fff; border:1px solid var(--line); box-shadow:0 16px 40px rgba(26,20,20,.18); display:none; flex-direction:column; max-height:min(70vh,520px); }
-#maple-panel.open { display:flex; }
-.maple-head { background:var(--maple); color:#fff; padding:.7rem .85rem; display:flex; align-items:center; gap:.5rem; }
-.maple-head svg { width:1.2rem; height:1.2rem; fill:#fff; }
-.maple-head p { margin:0; font-size:.78rem; opacity:.9; }
-.maple-msgs { flex:1; overflow:auto; padding:.75rem; background:#faf7f5; display:flex; flex-direction:column; gap:.45rem; }
-.maple-msgs .m { padding:.5rem .65rem; border-radius:8px; font-size:.92rem; max-width:92%; }
-.maple-msgs .bot { background:#fff; border:1px solid var(--line); align-self:flex-start; }
-.maple-msgs .you { background:var(--maple); color:#fff; align-self:flex-end; }
-.maple-chips { display:flex; flex-wrap:wrap; gap:.3rem; padding:0 .7rem .4rem; }
-.maple-chips button { font:inherit; font-size:.78rem; background:#fff; border:1px solid var(--line); padding:.2rem .45rem; cursor:pointer; }
-.maple-form { display:flex; gap:.35rem; padding:.55rem; border-top:1px solid var(--line); }
-.maple-form input { flex:1; font:inherit; border:1px solid var(--line); padding:.4rem .5rem; }
-.maple-form button { font:inherit; background:var(--maple); color:#fff; border:0; padding:.4rem .65rem; cursor:pointer; }
+:root {
+  --ink: #1a1414;
+  --paper: #f7f4ef;
+  --panel: #fffdfb;
+  --line: #e2d6d4;
+  --maple: #c8102e;
+  --maple-dark: #8e0b20;
+  --snow: #ffffff;
+  --mute: #6a5c5c;
+  --moss: #8e0b20;
+  --heat: #c8102e;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--paper); color: var(--ink); font: 18px/1.5 "Iowan Old Style", Palatino, Georgia, serif; }
+a { color: var(--maple-dark); }
+.wrap { max-width: 860px; margin: 0 auto; padding: 1.25rem 1.2rem 5rem; }
+.nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.1rem; align-items: center; padding-bottom: 1rem; border-bottom: 3px solid var(--maple); margin-bottom: 1.5rem; }
+.nav strong { margin-right: auto; display: flex; align-items: center; gap: 0.4rem; }
+.nav a { text-decoration: none; color: var(--ink); font-size: 0.95rem; }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.6rem; }
+h2 { font-size: 1.25rem; margin: 1.4rem 0 0.4rem; }
+.lede { font-size: 1.15rem; color: var(--mute); margin: 0 0 1.2rem; }
+.disclaimer { padding: 0.65rem 0.75rem; border-left: 3px solid var(--maple); background: #f8ecee; font-size: 0.92rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.2rem 0; }
+.btn { display: inline-block; padding: 0.55rem 0.9rem; border: 1px solid var(--ink); text-decoration: none; color: var(--ink); background: #fff; }
+.btn.primary { background: var(--maple); color: #fff; border-color: var(--maple); }
+.cards { display: grid; gap: 0.7rem; margin: 1.2rem 0; }
+.card { background: var(--panel); border: 1px solid var(--line); padding: 0.9rem 1rem; }
+.price-grid { display: grid; gap: 0.7rem; }
+@media (min-width: 700px) { .price-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.price-grid .card strong { display: block; font-size: 1.6rem; margin: 0.3rem 0; }
+ul { padding-left: 1.15rem; }
+footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 3px solid var(--maple); font-size: 0.88rem; color: var(--mute); }
+.flag-bar { height: 8px; background: linear-gradient(90deg, var(--maple) 0 18%, #fff 18% 82%, var(--maple) 82% 100%); }
+.site-nav { display:flex; gap:1rem; flex-wrap:wrap; padding:0.6rem 1.4rem; border-bottom:1px solid var(--line); font-size:0.95rem; }
+.site-nav a { color:var(--ink); text-decoration:none; }
+
+/* Maple assistant */
+#maple-fab {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 40;
+  width: 3.4rem; height: 3.4rem; border-radius: 50%;
+  background: var(--maple); color: #fff; border: 2px solid #fff;
+  box-shadow: 0 8px 24px rgba(200,16,46,.35);
+  cursor: pointer; display: grid; place-items: center;
+}
+#maple-fab svg { width: 1.6rem; height: 1.6rem; fill: #fff; }
+#maple-panel {
+  position: fixed; right: 1rem; bottom: 4.8rem; z-index: 40;
+  width: min(360px, calc(100vw - 1.6rem));
+  background: #fff; border: 1px solid var(--line);
+  box-shadow: 0 16px 40px rgba(26,20,20,.18);
+  display: none; flex-direction: column; max-height: min(70vh, 520px);
+}
+#maple-panel.open { display: flex; }
+.maple-head {
+  background: var(--maple); color: #fff; padding: 0.7rem 0.85rem;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.maple-head svg { width: 1.2rem; height: 1.2rem; fill: #fff; }
+.maple-head p { margin: 0; font-size: 0.78rem; opacity: .9; }
+.maple-head strong { display: block; font-size: 1rem; }
+.maple-msgs { flex: 1; overflow: auto; padding: 0.75rem; background: #faf7f5; display: flex; flex-direction: column; gap: 0.45rem; }
+.maple-msgs .m { padding: 0.5rem 0.65rem; border-radius: 8px; font-size: 0.92rem; max-width: 92%; }
+.maple-msgs .bot { background: #fff; border: 1px solid var(--line); align-self: flex-start; }
+.maple-msgs .you { background: var(--maple); color: #fff; align-self: flex-end; }
+.maple-chips { display: flex; flex-wrap: wrap; gap: 0.3rem; padding: 0 0.7rem 0.4rem; }
+.maple-chips button { font: inherit; font-size: 0.78rem; background: #fff; border: 1px solid var(--line); padding: 0.2rem 0.45rem; cursor: pointer; }
+.maple-form { display: flex; gap: 0.35rem; padding: 0.55rem; border-top: 1px solid var(--line); }
+.maple-form input { flex: 1; font: inherit; border: 1px solid var(--line); padding: 0.4rem 0.5rem; }
+.maple-form button { font: inherit; background: var(--maple); color: #fff; border: 0; padding: 0.4rem 0.65rem; cursor: pointer; }
