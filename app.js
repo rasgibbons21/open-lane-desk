@@ -176,7 +176,28 @@ function goPacket(unlock) {
 }
 
 $("assemble").onclick = () => goPacket(true);
-$("pay").onclick = () => goPacket(true);
+$("pay").onclick = async () => {
+  if (!form().name) { alert("Add your name on Papers first."); return; }
+  if (!selected) { alert("Pick a listing first."); return; }
+  $("pay").disabled = true;
+  try {
+    const res = await fetch("/api/checkout", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ jobId: selected.id, title: selected.title })
+    });
+    const data = await res.json();
+    if (data.url) { location.href = data.url; return; }
+    alert(data.error || "Stripe is not ready. Add STRIPE_SECRET_KEY on Vercel.");
+  } catch (err) {
+    alert("Checkout failed. You can still print a demo packet.");
+  } finally {
+    $("pay").disabled = false;
+  }
+};
+if (new URLSearchParams(location.search).get("paid") === "1") goPacket(true);
+renderCats(); renderJobs(); renderDetail(); renderTrail();
+loadLiveJobs();
 $("print").onclick = () => {
   if (!$("sheet").textContent.includes("CANADIAN-STYLE")) { alert("Assemble the packet first."); return; }
   window.print();
@@ -202,4 +223,18 @@ $("trail-add").onclick = () => {
   $("trail-form").reset();
 };
 
-renderCats(); renderJobs(); renderDetail(); renderTrail();
+async function loadLiveJobs() {
+  try {
+    const res = await fetch("/api/jobs");
+    const data = await res.json();
+    if (data.jobs && data.jobs.length) {
+      JOBS.length = 0;
+      data.jobs.forEach((j) => JOBS.push(j));
+      const note = document.querySelector("#tab-desk .lede");
+      if (note) note.textContent = "Updated " + (data.updatedAt || "today") + ". " + (data.source || "");
+      renderJobs();
+    }
+  } catch (err) {
+    console.warn("job feed", err);
+  }
+}
