@@ -57,7 +57,8 @@ function renderJobs() {
   list.forEach((j) => {
     const el = document.createElement("article");
     el.className = "card" + (selected && selected.id === j.id ? " on" : "");
-    el.innerHTML = `<span class="tag">${j.lmia}</span><h3>${j.title}</h3><p class="meta">${j.employer} · ${j.place} · ${j.pay}</p>`;
+    const PHOTOS = { grocery: "photos/grocery.jpg", warehouse: "photos/warehouse.jpg", fish: "photos/fish.jpg", farm: "photos/farm.jpg" };
+el.innerHTML = `<img src="${PHOTOS[j.cat] || "photos/canada.jpg"}" alt="" /><span class="tag">${j.lmia}</span><h3>${j.title}</h3><p class="meta">${j.employer} · ${j.place} · ${j.pay}</p>`;
     el.onclick = () => { selected = j; renderJobs(); renderDetail(); renderTarget(); };
     $("jobs").appendChild(el);
   });

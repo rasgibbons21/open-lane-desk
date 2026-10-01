@@ -27,7 +27,11 @@ h2 { font-family: Fraunces, Georgia, serif; font-weight: 520; font-size: 1.35rem
 @media (min-width: 800px) { .cards { grid-template-columns: 1fr 1fr 1fr; } }
 .card { background: rgba(255,255,255,0.72); border: 1px solid var(--line); border-radius: 16px; padding: 1.1rem 1.15rem; box-shadow: 0 10px 30px rgba(20,17,14,0.04); }
 .card p { margin: 0; color: var(--mute); }
-.flag-bar { height: 4px; background: linear-gradient(90deg, var(--maple), var(--gold), var(--maple)); }
+.hero { width: 100%; height: 320px; object-fit: cover; border-radius: 20px; margin: 0.6rem 0 1rem; }
+.card.photo { text-decoration: none; color: inherit; padding: 0; overflow: hidden; }
+.card.photo img { width: 100%; height: 160px; object-fit: cover; display: block; }
+.card.photo h2, .card.photo p { padding: 0 1rem; }
+.card.photo p { padding-bottom: 1rem; }
 footer, .site-nav { font-size: 0.9rem; }
 .site-nav { display: flex; gap: 1rem; padding: 0.8rem 1.4rem; }
 .site-nav a { color: var(--ink); text-decoration: none; }

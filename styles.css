@@ -27,7 +27,7 @@ input, textarea, select { font: inherit; color: var(--ink); background: #fff; bo
 .cats button.on { background: var(--maple); color: #fff; border-color: var(--maple); }
 .split { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 0.8rem; }
 .jobs { display: grid; gap: 0.55rem; }
-.card { padding: 0.9rem 1rem; cursor: pointer; }
+.card img { width: 100%; height: 120px; object-fit: cover; border-radius: 10px; margin-bottom: 0.45rem; }
 .card h3 { margin: 0.2rem 0; font-size: 1.05rem; }
 .card.on { border-color: var(--maple); }
 .tag { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--maple); }
