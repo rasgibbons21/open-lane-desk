@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T18:07:41Z",
+  "updatedAt": "2026-11-04T18:18:26Z",
   "source": "Job Bank Temporary Foreign Workers.",
   "jobs": [
     {
@@ -155,25 +155,6 @@
       ]
     },
     {
-      "id": "jb-50490510",
-      "cat": "warehouse",
-      "title": "Warehouse opening",
-      "employer": "See Job Bank",
-      "place": "Canada",
-      "pay": "See ad",
-      "lmia": "LMIA requested or approved",
-      "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50490510",
-      "reqs": [
-        "Read who can apply on the Job Bank page."
-      ],
-      "apply": [
-        "Open this Job Bank page.",
-        "Use Direct Apply if it is there.",
-        "Save the confirmation."
-      ]
-    },
-    {
       "id": "jb-50480082",
       "cat": "warehouse",
       "title": "Warehouse opening",
@@ -307,6 +288,25 @@
       ]
     },
     {
+      "id": "jb-50252521",
+      "cat": "warehouse",
+      "title": "Warehouse opening",
+      "employer": "See Job Bank",
+      "place": "Canada",
+      "pay": "See ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50252521",
+      "reqs": [
+        "Read who can apply on the Job Bank page."
+      ],
+      "apply": [
+        "Open this Job Bank page.",
+        "Use Direct Apply if it is there.",
+        "Save the confirmation."
+      ]
+    },
+    {
       "id": "jb-50598412",
       "cat": "fish",
       "title": "Fish Plant opening",
@@ -345,7 +345,7 @@
       ]
     },
     {
-      "id": "jb-50169858",
+      "id": "jb-50223430",
       "cat": "fish",
       "title": "Fish Plant opening",
       "employer": "See Job Bank",
@@ -353,7 +353,7 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50169858",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50223430",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
@@ -364,7 +364,7 @@
       ]
     },
     {
-      "id": "jb-50163721",
+      "id": "jb-50223427",
       "cat": "fish",
       "title": "Fish Plant opening",
       "employer": "See Job Bank",
@@ -372,7 +372,7 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50163721",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50223427",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
@@ -383,7 +383,7 @@
       ]
     },
     {
-      "id": "jb-50163336",
+      "id": "jb-50215986",
       "cat": "fish",
       "title": "Fish Plant opening",
       "employer": "See Job Bank",
@@ -391,7 +391,7 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50163336",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50215986",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
@@ -402,7 +402,7 @@
       ]
     },
     {
-      "id": "jb-50160443",
+      "id": "jb-50214885",
       "cat": "fish",
       "title": "Fish Plant opening",
       "employer": "See Job Bank",
@@ -410,7 +410,7 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50160443",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50214885",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
@@ -421,7 +421,7 @@
       ]
     },
     {
-      "id": "jb-50160427",
+      "id": "jb-50214473",
       "cat": "fish",
       "title": "Fish Plant opening",
       "employer": "See Job Bank",
@@ -429,7 +429,7 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50160427",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50214473",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
@@ -440,7 +440,7 @@
       ]
     },
     {
-      "id": "jb-50155925",
+      "id": "jb-50214419",
       "cat": "fish",
       "title": "Fish Plant opening",
       "employer": "See Job Bank",
@@ -448,7 +448,26 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50155925",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50214419",
+      "reqs": [
+        "Read who can apply on the Job Bank page."
+      ],
+      "apply": [
+        "Open this Job Bank page.",
+        "Use Direct Apply if it is there.",
+        "Save the confirmation."
+      ]
+    },
+    {
+      "id": "jb-50660869",
+      "cat": "farm",
+      "title": "Farm Worker opening",
+      "employer": "See Job Bank",
+      "place": "Canada",
+      "pay": "See ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50660869",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
@@ -554,6 +573,25 @@
       ]
     },
     {
+      "id": "jb-50598403",
+      "cat": "farm",
+      "title": "Farm Worker opening",
+      "employer": "See Job Bank",
+      "place": "Canada",
+      "pay": "See ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50598403",
+      "reqs": [
+        "Read who can apply on the Job Bank page."
+      ],
+      "apply": [
+        "Open this Job Bank page.",
+        "Use Direct Apply if it is there.",
+        "Save the confirmation."
+      ]
+    },
+    {
       "id": "jb-50594668",
       "cat": "farm",
       "title": "Farm Worker opening",
@@ -563,44 +601,6 @@
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
       "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50594668",
-      "reqs": [
-        "Read who can apply on the Job Bank page."
-      ],
-      "apply": [
-        "Open this Job Bank page.",
-        "Use Direct Apply if it is there.",
-        "Save the confirmation."
-      ]
-    },
-    {
-      "id": "jb-50593846",
-      "cat": "farm",
-      "title": "Farm Worker opening",
-      "employer": "See Job Bank",
-      "place": "Canada",
-      "pay": "See ad",
-      "lmia": "LMIA requested or approved",
-      "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50593846",
-      "reqs": [
-        "Read who can apply on the Job Bank page."
-      ],
-      "apply": [
-        "Open this Job Bank page.",
-        "Use Direct Apply if it is there.",
-        "Save the confirmation."
-      ]
-    },
-    {
-      "id": "jb-50587186",
-      "cat": "farm",
-      "title": "Farm Worker opening",
-      "employer": "See Job Bank",
-      "place": "Canada",
-      "pay": "See ad",
-      "lmia": "LMIA requested or approved",
-      "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50587186",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
