@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T18:07:13Z",
+  "updatedAt": "2026-11-23T22:17:18Z",
   "source": "Job Bank Temporary Foreign Workers.",
   "jobs": [
     {
@@ -459,6 +459,25 @@
       ]
     },
     {
+      "id": "jb-50765711",
+      "cat": "farm",
+      "title": "Farm Worker opening",
+      "employer": "See Job Bank",
+      "place": "Canada",
+      "pay": "See ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50765711",
+      "reqs": [
+        "Read who can apply on the Job Bank page."
+      ],
+      "apply": [
+        "Open this Job Bank page.",
+        "Use Direct Apply if it is there.",
+        "Save the confirmation."
+      ]
+    },
+    {
       "id": "jb-50760149",
       "cat": "farm",
       "title": "Farm Worker opening",
@@ -535,6 +554,25 @@
       ]
     },
     {
+      "id": "jb-50702123",
+      "cat": "farm",
+      "title": "Farm Worker opening",
+      "employer": "See Job Bank",
+      "place": "Canada",
+      "pay": "See ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50702123",
+      "reqs": [
+        "Read who can apply on the Job Bank page."
+      ],
+      "apply": [
+        "Open this Job Bank page.",
+        "Use Direct Apply if it is there.",
+        "Save the confirmation."
+      ]
+    },
+    {
       "id": "jb-50701009",
       "cat": "farm",
       "title": "Farm Worker opening",
@@ -554,7 +592,7 @@
       ]
     },
     {
-      "id": "jb-50693614",
+      "id": "jb-50694101",
       "cat": "farm",
       "title": "Farm Worker opening",
       "employer": "See Job Bank",
@@ -562,45 +600,7 @@
       "pay": "See ad",
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50693614",
-      "reqs": [
-        "Read who can apply on the Job Bank page."
-      ],
-      "apply": [
-        "Open this Job Bank page.",
-        "Use Direct Apply if it is there.",
-        "Save the confirmation."
-      ]
-    },
-    {
-      "id": "jb-50693264",
-      "cat": "farm",
-      "title": "Farm Worker opening",
-      "employer": "See Job Bank",
-      "place": "Canada",
-      "pay": "See ad",
-      "lmia": "LMIA requested or approved",
-      "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50693264",
-      "reqs": [
-        "Read who can apply on the Job Bank page."
-      ],
-      "apply": [
-        "Open this Job Bank page.",
-        "Use Direct Apply if it is there.",
-        "Save the confirmation."
-      ]
-    },
-    {
-      "id": "jb-50692241",
-      "cat": "farm",
-      "title": "Farm Worker opening",
-      "employer": "See Job Bank",
-      "place": "Canada",
-      "pay": "See ad",
-      "lmia": "LMIA requested or approved",
-      "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50692241",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50694101",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
