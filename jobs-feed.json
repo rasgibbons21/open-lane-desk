@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T19:43:05Z",
+  "updatedAt": "2026-11-28T18:34:34Z",
   "source": "Job Bank Temporary Foreign Workers.",
   "jobs": [
     {
@@ -155,6 +155,25 @@
       ]
     },
     {
+      "id": "jb-50498920",
+      "cat": "warehouse",
+      "title": "Warehouse opening",
+      "employer": "See Job Bank",
+      "place": "Canada",
+      "pay": "See ad",
+      "lmia": "LMIA requested or approved",
+      "noc": "Confirm on Job Bank",
+      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50498920",
+      "reqs": [
+        "Read who can apply on the Job Bank page."
+      ],
+      "apply": [
+        "Open this Job Bank page.",
+        "Use Direct Apply if it is there.",
+        "Save the confirmation."
+      ]
+    },
+    {
       "id": "jb-50488088",
       "cat": "warehouse",
       "title": "Warehouse opening",
@@ -240,25 +259,6 @@
       "lmia": "LMIA requested or approved",
       "noc": "Confirm on Job Bank",
       "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50392353",
-      "reqs": [
-        "Read who can apply on the Job Bank page."
-      ],
-      "apply": [
-        "Open this Job Bank page.",
-        "Use Direct Apply if it is there.",
-        "Save the confirmation."
-      ]
-    },
-    {
-      "id": "jb-50368950",
-      "cat": "warehouse",
-      "title": "Warehouse opening",
-      "employer": "See Job Bank",
-      "place": "Canada",
-      "pay": "See ad",
-      "lmia": "LMIA requested or approved",
-      "noc": "Confirm on Job Bank",
-      "url": "https://www.jobbank.gc.ca/jobsearch/jobpostingtfw/50368950",
       "reqs": [
         "Read who can apply on the Job Bank page."
       ],
